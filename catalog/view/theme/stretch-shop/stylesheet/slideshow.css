@@ -1,0 +1,211 @@
+/* Сброс настроек браузера */
+.flex-container a:active,
+.flexslider a:active,
+.flex-container a:focus,
+.flexslider a:focus  { outline: none; }
+
+.slides,
+.flex-control-nav,
+.flex-direction-nav {
+ margin: 0;
+ padding: 0;
+ list-style: none;
+}
+
+.flexslider a img { outline: none; border: none; }
+
+.flexslider {
+ margin: 0;
+ padding: 0;
+}
+
+/* Скрываем слайды перед загрузкой ява-скрипта */
+.flexslider .slides > li {
+ display: none;
+ -webkit-backface-visibility: hidden;
+}
+
+.flexslider .slides img {
+ width: 100%;
+ display: block;
+
+ -webkit-border-radius: 2px;
+ -moz-border-radius: 2px;
+ border-radius: 2px;
+}
+
+/* Чистим предидущее изображение для .slides */
+.slides:after {
+ content: ".";
+ display: block;
+ clear: both;
+ visibility: hidden;
+ line-height: 0;
+ height: 0;
+}
+
+html[xmlns] .slides { display: block; }
+* html .slides { height: 1%; }
+
+
+
+/* Основной стиль слайдера */
+.flexslider {
+ position: relative;
+ zoom: 1;
+ -webkit-border-radius: 3px;
+ -moz-border-radius: 3px;
+ border-radius: 3px;
+
+ -webkit-box-shadow: 0px 1px 1px rgba(0,0,0, .2);
+ -moz-box-shadow: 0px 1px 1px rgba(0,0,0, .2);
+ box-shadow: 0px 1px 1px rgba(0,0,0, .2);
+}
+
+/* Вы можете изменить под свои требования*/
+.flex-container {
+ min-width: 150px;
+ overflow: hidden;
+ margin-bottom: 20px;
+}
+
+.flexslider .slides { zoom: 1; }
+
+
+
+/* Кнопки прокрутки. Стили */
+.flex-direction-nav a {
+ display: block;
+ position: absolute;
+ width: 40px;
+ height: 55px;
+ top: 50%;
+ cursor: pointer;
+ text-indent: -9999px;
+}
+
+.flex-direction-nav a:before {
+ display: block;
+ position: absolute;
+ content: '';
+ width: 30px;
+ height: 30px;
+ left: 2px;
+ background: url(../image/arrows.png) no-repeat;
+}
+
+.flex-direction-nav a:after {
+ display: block;
+ position: absolute;
+ content: '';
+ width: 0;
+ height: 0;
+ top: 35px;
+}
+
+.flex-direction-nav .flex-next {
+ right: 0;
+
+ -webkit-border-radius: 3px 0 0 3px;
+ -moz-border-radius: 3px 0 0 3px;
+ border-radius: 3px 0 0 3px;
+}
+
+.flex-direction-nav .flex-prev {
+ left: 0;
+
+ -webkit-border-radius: 0 3px 3px 0;
+ -moz-border-radius: 0 3px 3px 0;
+ border-radius: 0 3px 3px 0;
+}
+
+.flex-direction-nav .flex-next:before { background-position: -30px 0;}
+.flex-direction-nav .flex-prev:before { background-position: 0 0; }
+
+.flex-direction-nav .flex-next:after {
+ right: 0;
+ border-bottom: 5px solid transparent;
+ border-left: 5px solid #31611e;
+ display:none;
+}
+
+.flex-direction-nav .flex-prev:after {
+ left: 0;
+ border-bottom: 5px solid transparent;
+ border-right: 5px solid #31611e;
+ display:none;
+}
+
+
+
+/* Кнопки прокрутки. Управление */
+.flexslider .flex-control-nav {
+ position: absolute;
+ width: 100%;
+ bottom: -40px;
+ text-align: center;
+ margin: 0 0 0 -10px;
+ display: none;
+}
+
+.flex-control-nav li {
+ display: inline-block;
+ zoom: 1;
+}
+
+.flex-control-paging li a {
+ display: block;
+ cursor: pointer;
+ text-indent: -9999px;
+ width: 12px;
+ height: 12px;
+ margin: 0 3px;
+ background-color: #b6b6b6 \9;
+
+ -webkit-border-radius: 12px;
+ -moz-border-radius: 12px;
+ border-radius: 12px;
+
+ -webkit-box-shadow: inset 0 0 0 2px #b6b6b6;
+ -moz-box-shadow: inset 0 0 0 2px #b6b6b6;
+ box-shadow: inset 0 0 0 2px #b6b6b6;
+}
+
+.flex-control-paging li a.flex-active {
+ background-color: #82d344;
+ background-image: -webkit-gradient(linear, left top, left bottom, from(#82d344), to(#51af34));
+ background-image: -webkit-linear-gradient(top, #82d344, #51af34);
+ background-image: -moz-linear-gradient(top, #82d344, #51af34);
+ background-image: -o-linear-gradient(top, #82d344, #51af34);
+ background-image: linear-gradient(to bottom, #82d344, #51af34);
+
+ -webkit-box-shadow: none;
+ -moz-box-shadow: none;
+ box-shadow: none;
+}
+
+
+
+/* Подпись к изображению */
+.flexslider .slides p {
+ display: block;
+ position: absolute;
+ left: 0;
+ bottom: 0;
+ padding: 0 5px;
+ margin: 0;
+
+ font-family: Helvetica, Arial, sans-serif;
+ font-size: 12px;
+ font-weight: bold;
+ text-transform: uppercase;
+ line-height: 20px;
+ color: white;
+
+ background-color: #222222;
+ background: rgba(0,0,0, .9);
+
+ -webkit-border-radius: 2px;
+ -moz-border-radius: 2px;
+ border-radius: 2px;
+}
